@@ -28,19 +28,19 @@ def main():
 
 def send_sos():
     message = "🚨 Accident Detected at Laptop - " + datetime.now().strftime("%I:%M %p") + "\n"
-    with open("C:\\STUDIES\\libraries\\ai detect\\sos_data.txt", "a", encoding="utf-8") as file:
+    with open("C:\\STUDIES\\libraries\\Accident-detection-ai\\sos_data.txt", "a", encoding="utf-8") as file:
         file.write(message)
 
     import json
     try:
-        with open("C:\\STUDIES\\libraries\\ai detect\\sos_data.json", "r") as f:
+        with open("C:\\STUDIES\\libraries\\Accident-detection-ai\\sos_data.json", "r") as f:
             data = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         data = []
 
     data.append({ "time": datetime.now().strftime("%I:%M %p"), "location": "laptop" })
 
-    with open("C:\\STUDIES\\libraries\\ai detect\\sos_data.json", "w") as f:
+    with open("C:\\STUDIES\\libraries\\Accident-detection-ai\\sos_data.json", "w") as f:
         json.dump(data, f, indent=2)
 
 if __name__ == "__main__":

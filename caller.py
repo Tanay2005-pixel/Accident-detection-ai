@@ -3,7 +3,7 @@ from twilio.rest import Client
 
 def make_call():
     account_sid = 'ACcc95568d1320afc76073540d6319cc74'
-    auth_token = '77042985f7d8dfba841badac41c50640'
+    auth_token = '26bd0079484574ee7cabf391c96da9c0'
     twilio_number = '+16317107815'
     destination_number = '+919354961853'
 
